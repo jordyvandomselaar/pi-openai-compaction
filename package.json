@@ -1,0 +1,49 @@
+{
+  "name": "@jordyvd/pi-openai-compaction",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "OpenAI native standalone compaction replay for Pi.",
+  "author": "Jordy Van Domselaar",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "openai",
+    "compaction",
+    "codex",
+    "responses"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "files": [
+    "index.ts",
+    "settings.json",
+    "src/compact-client.ts",
+    "src/debug.ts",
+    "src/details-store.ts",
+    "src/extension-runtime.ts",
+    "src/payload-rewrite.ts",
+    "src/runtime.ts",
+    "src/serializer.ts",
+    "src/settings.ts",
+    "src/supported-environment.ts",
+    "src/types.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "bun test",
+    "test:coverage": "bun test --coverage --coverage-reporter=text --coverage-reporter=lcov && node ./scripts/check-lcov.mjs ./coverage/lcov.info",
+    "test:pi": "bun test ./test/pi-smoke.test.ts"
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-ai": "*",
+    "@mariozechner/pi-coding-agent": "*"
+  }
+}

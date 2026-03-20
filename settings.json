@@ -1,0 +1,11 @@
+{
+  "enabled": true,
+  "debug": false,
+  "logProviderPayloads": false,
+  "logCompactResponses": false,
+  "redactSensitiveData": true,
+  "artifactRoot": "~/.pi/agent/artifacts/openai-native-compaction",
+  "supportedProviders": ["openai", "openai-codex"],
+  "supportedApis": ["openai-responses", "openai-codex-responses"],
+  "notifyOnLoad": false
+}
